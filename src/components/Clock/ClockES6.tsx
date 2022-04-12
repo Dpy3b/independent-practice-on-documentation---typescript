@@ -23,7 +23,7 @@ class ClockES6 extends Component<ClockProps, ClockState> {
 		super(props);
 		this.state = { date: new Date() };
 	}
-
+	// ниже я типа использую эксперементальный синтаксис чтобы не привязывать контекст явно в конструкторе
 	componentDidMount() {
 		this.timerID = window.setInterval(() => this.tick(), 1000); // здесь обязательно как метод объекта window указываем эту хуйню
 	}
