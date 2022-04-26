@@ -28,7 +28,7 @@ const App: FC = () => {
 			<LoginControl />
 			<NumberList numbers={numbers} />
 			{/* <NameFormES6 /> */}
-			<NameForm/>
+			<NameForm />
 		</div>
 	);
 };
