@@ -4,7 +4,7 @@ interface NameFormProps {
 	//value: string;
 }
 
-const NameForm: FC<NameFormProps> = props => {
+const NameForm: FC<NameFormProps> = () => {
 	const [value, setValue] = useState('');
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setValue(e.target.value); // записываем новый результат в состояние
@@ -14,16 +14,12 @@ const NameForm: FC<NameFormProps> = props => {
 		e.preventDefault();
 	};
 	return (
-		<form onSubmit={handleSubmit}>
+		<form style={{ marginBottom: 20 }} onSubmit={handleSubmit}>
 			<label>
 				Имя:
-				<input
-					type="text"
-					value={value}
-					onChange={handleChange}
-				/>
+				<input type='text' value={value} onChange={handleChange} />
 			</label>
-			<input type="submit" value="Отправить" />
+			<input type='submit' value='Отправить' />
 		</form>
 	);
 };

@@ -8,6 +8,7 @@ type NameFormES6Props = {
 	// пропсы пустые т.к. ничего не передаем
 };
 
+// В управляемом компоненте значение поля ввода всегда определяется состоянием React.
 class NameFormES6 extends Component<NameFormES6Props, NameFormES6State> {
 	constructor(props: NameFormES6Props) {
 		super(props);

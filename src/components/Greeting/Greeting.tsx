@@ -8,7 +8,7 @@ interface GreetingProps {
 
 const Greeting:FC<GreetingProps> = (props) => {
    const isLoggedIn = props.isLoggedIn;
-   
+
 		if (isLoggedIn) {
 			return <UserGreeting />;
 		}

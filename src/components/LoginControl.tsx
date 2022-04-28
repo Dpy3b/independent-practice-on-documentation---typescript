@@ -1,5 +1,5 @@
 import React, { Component, FC } from 'react';
-import Greeting from './Greeting';
+import Greeting from './Greeting/Greeting';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 
@@ -45,6 +45,10 @@ export default class LoginControl extends Component<
 		return (
 			<div className='greeting'>
 				<Greeting isLoggedIn={isLoggedIn} />
+				{/* ниже мы могли и просто написать это строками в частях условия, но тут просто для демонстрации дублирую прикол с тернарным оператором и значением isLoggedIn */}
+				<div>
+					Пользователь <b>{isLoggedIn ? 'сейчас' : 'не'}</b> на сайте.
+				</div>
 				{isLoggedIn ? (
 					<LogoutButton onClick={this.handleLogoutClick} />
 				) : (
